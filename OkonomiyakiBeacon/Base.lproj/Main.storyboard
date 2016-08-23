@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zc9-mX-5Pw">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Promotion-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="PromotionViewController" id="vXZ-lx-hvc" customClass="PromotionViewController" customModule="OkonomiyakiBeacon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Promotion" image="PromotionIcon" id="tWA-Ue-eQo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="396" y="186"/>
+        </scene>
+        <!--Beacons-->
+        <scene sceneID="n6r-QJ-VDW">
+            <objects>
+                <viewController id="p31-cq-2RX" customClass="BeaconsTableViewController" customModule="OkonomiyakiBeacon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vvF-Ty-MB6"/>
+                        <viewControllerLayoutGuide type="bottom" id="afF-WD-Dgc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dMJ-Mh-dhY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="bbU-2I-Ahr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="beaconCell" id="WYC-V5-DMP">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WYC-V5-DMP" id="wvN-3l-FKG">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="p31-cq-2RX" id="sN8-fz-aYz"/>
+                                    <outlet property="delegate" destination="p31-cq-2RX" id="L7z-9g-VSG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bbU-2I-Ahr" secondAttribute="trailing" id="6XR-9H-qQy"/>
+                            <constraint firstAttribute="bottom" secondItem="bbU-2I-Ahr" secondAttribute="bottom" id="Cae-C9-Q3U"/>
+                            <constraint firstItem="bbU-2I-Ahr" firstAttribute="top" secondItem="dMJ-Mh-dhY" secondAttribute="top" id="iFS-rE-Lc2"/>
+                            <constraint firstItem="bbU-2I-Ahr" firstAttribute="leading" secondItem="dMJ-Mh-dhY" secondAttribute="leading" id="lEb-95-3FH"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Beacons" image="Login" id="P7G-KJ-inz"/>
+                    <connections>
+                        <outlet property="beaconTableView" destination="bbU-2I-Ahr" id="iJc-8I-LCq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="taL-3k-RZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-249" y="1407"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="9c5-KP-m7B">
+            <objects>
+                <viewController id="ee4-Bf-ZaO" customClass="MenuViewController" customModule="OkonomiyakiBeacon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zr6-5a-JPf"/>
+                        <viewControllerLayoutGuide type="bottom" id="AbR-jq-EAl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pxl-u8-dhg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Ep-mj-P5h">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.26274509800000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NRC-F7-MoT">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="tCd-2m-M3n" customClass="MenuCollectionViewCell" customModule="OkonomiyakiBeacon" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Ep-mj-P5h" firstAttribute="top" secondItem="pxl-u8-dhg" secondAttribute="top" id="0gl-aH-byI"/>
+                            <constraint firstAttribute="trailing" secondItem="4Ep-mj-P5h" secondAttribute="trailing" id="AoE-af-1yd"/>
+                            <constraint firstItem="4Ep-mj-P5h" firstAttribute="leading" secondItem="pxl-u8-dhg" secondAttribute="leading" id="PLB-4O-LYe"/>
+                            <constraint firstAttribute="bottom" secondItem="4Ep-mj-P5h" secondAttribute="bottom" id="WMk-YN-GdB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="w9T-AL-Cew"/>
+                    <connections>
+                        <outlet property="menuCollectionView" destination="4Ep-mj-P5h" id="dkN-Km-Rs0"/>
+                        <segue destination="Brv-Z0-g94" kind="presentation" identifier="DetailMenuSegue" modalPresentationStyle="formSheet" id="irg-bH-DDA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EaV-YX-PJV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1208" y="893"/>
+        </scene>
+        <!--Detail Menu View Controller-->
+        <scene sceneID="c3j-jf-18i">
+            <objects>
+                <viewController id="Brv-Z0-g94" customClass="DetailMenuViewController" customModule="OkonomiyakiBeacon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BHG-Qa-iKp"/>
+                        <viewControllerLayoutGuide type="bottom" id="PEm-eH-Kbv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uaq-BF-O5l">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVP-lM-GWa" customClass="MKButton" customModule="OkonomiyakiBeacon" customModuleProvider="target">
+                                <rect key="frame" x="504" y="20" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.71764705880000002" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="5XR-aj-uCM"/>
+                                    <constraint firstAttribute="width" constant="60" id="rqT-3Q-RFd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btExit:" destination="Brv-Z0-g94" eventType="touchUpInside" id="PZB-kB-8mE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yVP-lM-GWa" secondAttribute="trailing" constant="10" id="9tl-Hl-3HP"/>
+                            <constraint firstItem="yVP-lM-GWa" firstAttribute="top" secondItem="BHG-Qa-iKp" secondAttribute="bottom" constant="10" id="qbI-lI-LGN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btExit" destination="yVP-lM-GWa" id="aE0-f9-7UA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YgR-hO-rYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1902" y="893"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="kgm-ZG-ZoQ">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="Zc9-mX-5Pw" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="LaY-eR-syc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="tzc-1f-hTi"/>
+                        <segue destination="c06-OR-VG8" kind="relationship" relationship="viewControllers" id="6Ck-d6-aKb"/>
+                        <segue destination="p31-cq-2RX" kind="relationship" relationship="viewControllers" id="nR2-0b-o1Y"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbQ-Im-GjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-344" y="411"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="71J-cg-mns">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c06-OR-VG8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Menu" image="Food" id="SDE-LF-UD2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4HU-kC-MVI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ee4-Bf-ZaO" kind="relationship" relationship="rootViewController" id="xqA-bz-Y4d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3nK-fX-hNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="396" y="893"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Food" width="25" height="25"/>
+        <image name="Login" width="25" height="25"/>
+        <image name="PromotionIcon" width="25" height="25"/>
+    </resources>
+</document>
